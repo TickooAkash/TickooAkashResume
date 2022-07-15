@@ -1,0 +1,107 @@
+{
+  "main": {
+    "name":"Hi!i! This is Akash Tickoo",
+    "description":"I am a Software Development Engineer having 2 years of experience. Currenty working in SIEMENS. This project is a resume template. Hope you like it",
+    "image":"profilepic.jpg",
+    "bio":"I am a Software Development Engineer having 2 years of experience. Currenty working in SIEMENS, Strong support professional with a Bachelor of Technology (B.Tech.) majored in Computer Engineering from Veermata Jijabai Technical Institute. Good general understanding of computer technology, highly motivated and enthusiastic and capable of working on own initiative.",
+    "contactmessage":"Here is where you should write your message to readers to have them get in contact with you.",
+    "email": "tickoo47akash@gmail.com",
+    "phone": "+91-7006520470",
+    "github":"https://github.com/TickooAkash",
+    "LinkedIN":"https://www.linkedin.com/in/akash-tickoo-1a8774167/",
+    "address":{
+      "street":"DS2 Nisarg City 1",
+      "city":"Pune",
+      "state":"Maharastra",
+      "zip": "411057"
+    },
+    "website": "",
+    "resumedownload":"https://drive.google.com/drive/folders/1j00fb-Nzb8irEeTdSM57MtDSSLBozg--",
+    "social":[
+      {
+        "name":"facebook",
+        "url":"https://www.facebook.com/akash.tickoo.5",
+        "className":"fa fa-facebook"
+      },
+      {
+        "name":"twitter",
+        "url":"http://twitter.com/tickoo47",
+        "className":"fa fa-twitter"
+      },
+      {
+        "name":"linkedin",
+        "url":"https://www.linkedin.com/in/akash-tickoo-1a8774167/",
+        "className":"fa fa-linkedin"
+      },
+      {
+        "name":"instagram",
+        "url":"http://instagram.com/tickoo47",
+        "className":"fa fa-instagram"
+      },
+      {
+        "name":"github",
+        "url":"https://github.com/TickooAkash",
+        "className":"fa fa-github"
+      }
+    ]
+  },
+  "resume":{
+    "skillmessage":"",
+    "education":[
+      {
+        "school":"Veermata Jijabai Technological Institute, Mumbai",
+        "degree":"Bachelor of Technology - Computer Engineering;",
+        "graduated":"September 2020",
+        "percentage": "7.49",
+        "description":"Courses: Data Structures, Java, Artificial Intelligence, Machine Learning, Database"
+      },
+      {
+        "school":"Govt. high Sec. School, Jammu",
+        "degree":"Higher Secondary Certificate",
+        "graduated":"May 2016",
+        "percentage": "93.4%",
+        "description":"Science Student PCM-97.33%"
+      }
+    ],
+    "work":[
+      {
+        "company":"Siemens Digital Industries Software, Pune",
+        "title":"Associate Software Engineer",
+        "years":"Sept 2020 - Present",
+        "description":"Worked on the Fast application on Teamcenter/AW project. Handled the client side as well as server side dealing with jfrog artifactory , CI-CD GitLab (DevOps),React, docker, customer relation (internal & external), Python, PowerShell etc. Used Scrum Agile Methodology in work (Daily Scrum Meeting, Planning, Sprint Backlog, 1:1 meetings)"
+      },
+      {
+        "company":"Black Id Solution",
+        "title":"Student Intern",
+        "years":"May 27, 2019 - July 15, 2019",
+        "description":"Created website layout/user interface by using standard HTML/CSS practices, created and maintained software documentation."
+      }
+    ],
+    "skills":[
+      {
+        "name":"JAVA",
+        "level":"85%"
+      },
+      {
+        "name":"ReactJs",
+        "level":"80%"
+      },
+      {
+        "name":"Python,",
+        "level":"70%"
+      },
+      {
+        "name":"GitLab",
+        "level":"80%"
+      },
+      {
+        "name":"Docker",
+        "level":"65%"
+      },
+      {
+        "name":"JavaScript",
+        "level":"70%"
+      }
+    ]
+  }
+}
