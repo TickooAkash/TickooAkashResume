@@ -1,7 +1,18 @@
 import React, { Component } from "react";
 import { Fade, Slide } from "react-reveal";
+import emailjs from "emailjs-com";
 
 class Contact extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      name: "",
+      email: "",
+      subject: "",
+      message: "",
+      successMessage: ""
+    };
+  }
   render() {
     if (!this.props.data) return null;
 
@@ -12,6 +23,10 @@ class Contact extends Component {
     const zip = this.props.data.address.zip;
     const phone = this.props.data.phone;
     const message = this.props.data.contactmessage;
+
+    function myFunction() {
+      console.log("hello world"); // The function returns the product of p1 and p2
+    }
 
     return (
       <section id="contact">
@@ -32,7 +47,12 @@ class Contact extends Component {
         <div className="row">
           <Slide left duration={1000}>
             <div className="eight columns">
-              <form action="" method="post" id="contactForm" name="contactForm">
+              <form
+                onSubmit={this.handleSubmit.bind(this)}
+                method="post"
+                id="contactForm"
+                name="contactForm"
+              >
                 <fieldset>
                   <div>
                     <label htmlFor="contactName">
@@ -44,7 +64,8 @@ class Contact extends Component {
                       size="35"
                       id="contactName"
                       name="contactName"
-                      onChange={this.handleChange}
+                      value={this.state.name}
+                      onChange={this.onNameChange.bind(this)}
                     />
                   </div>
 
@@ -58,19 +79,23 @@ class Contact extends Component {
                       size="35"
                       id="contactEmail"
                       name="contactEmail"
-                      onChange={this.handleChange}
+                      value={this.state.email}
+                      onChange={this.onEmailChange.bind(this)}
                     />
                   </div>
 
                   <div>
-                    <label htmlFor="contactSubject">Subject</label>
+                    <label htmlFor="contactSubject">
+                      Subject <span className="required">*</span>
+                    </label>
                     <input
                       type="text"
                       defaultValue=""
                       size="35"
                       id="contactSubject"
                       name="contactSubject"
-                      onChange={this.handleChange}
+                      value={this.state.subject}
+                      onChange={this.onSubjectChange.bind(this)}
                     />
                   </div>
 
@@ -83,23 +108,22 @@ class Contact extends Component {
                       rows="15"
                       id="contactMessage"
                       name="contactMessage"
+                      value={this.state.message}
+                      onChange={this.onMessageChange.bind(this)}
                     ></textarea>
                   </div>
 
                   <div>
-                    <button className="submit">Submit</button>
+                    <button className="submit" >Submit</button>
                     <span id="image-loader">
                       <img alt="" src="images/loader.gif" />
                     </span>
                   </div>
+                  <h4 color="#ffffff">{this.state.successMessage}</h4>
                 </fieldset>
+                
               </form>
-
-              <div id="message-warning"> Error boy</div>
-              <div id="message-success">
-                <i className="fa fa-check"></i>Your message was sent, thank you!
-                <br />
-              </div>
+              
             </div>
           </Slide>
 
@@ -115,13 +139,42 @@ class Contact extends Component {
                   <span>{phone}</span>
                 </p>
               </div>
-
-              
             </aside>
           </Slide>
         </div>
       </section>
     );
+  }
+  onNameChange(event) {
+    this.setState({ name: event.target.value });
+  }
+
+  onEmailChange(event) {
+    this.setState({ email: event.target.value });
+  }
+
+  onSubjectChange(event) {
+    this.setState({ subject: event.target.value });
+  }
+
+  onMessageChange(event) {
+    this.setState({ message: event.target.value });
+  }
+
+  handleSubmit(e) {
+    e.preventDefault();
+    emailjs
+      .sendForm(
+        "service_grz6zeg",
+        "template_g67axhd",
+        e.target,
+        "TkeiYiy3ORS4_Pw9Q"
+      )
+      .then((res) => {
+        console.log(res);
+        this.setState({ name: "", email: "", message: "", subject: "" ,successMessage:"Your message was sent, thank you!"});
+      })
+      .catch((err) => console.log(err));
   }
 }
 

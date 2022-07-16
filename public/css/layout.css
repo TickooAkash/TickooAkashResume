@@ -56,7 +56,7 @@ header .banner {
 
 header .banner-text { width: 100%; }
 header .banner-text h1 {
-   font: 90px/1.1em 'Brush Script MT', cursive;
+   font: 90px/1.1em 'Brush Script MT';
    color: #fff;
    letter-spacing: -2px;
    margin: 0 auto 18px auto;
@@ -853,7 +853,7 @@ call-to-action .button {
 	border: 0;
 	outline: none;
    font-size: 15px;
-   line-height: 24px;
+   line-height: 7px;
    width: 65%;
 }
 #contact input:focus,
